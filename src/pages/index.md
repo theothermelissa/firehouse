@@ -1,21 +1,21 @@
 ---
 templateKey: index-page
-title: Delicious, Easy, Enjoyable Fundraisers
+title: Firehouse Barbecue Fundraisers
 image: /img/woodPlanks.jpg
-heading: Delicious, Easy, Enjoyable Fundraisers
+heading: Barbecue fundraisers trusted by nonprofits throughout the South since 1999.
 subheading: High-profit, low-hassle local fundraising.
 mainpitch:
   title: About Firehouse
-  description: |-
-    We've found that successful fundraiser have two crucial components: an excellent product, and effective seller support.Motivated, well-supported sellers can make up for an inferior product, but they won't have breakout success. And even excellent products will fall flat when sellers don't have the training and support they need. 
+  description: |
+    We've found that successful fundraiser have two crucial components: an excellent product, and effective seller support. Motivated, well-supported sellers can make up for an inferior product, but they won't have breakout success. And even excellent products will fall flat when sellers don't have the training and support they need.  
 
-    So we do both. 
+    So we do both.  
 
-    Many of our early clients were serving communities without a lot of disposable income. Their sellers felt (understandably) resistant to selling their friends and family things they probably wouldn't use. So we decided to sell something everybody needs: Satisfying, delicious food. And more than enough of it to feed a large, hungry family for multiple meals. 
+    Many of our early clients were serving communities without a lot of disposable income. Their sellers felt (understandably) resistant to selling their friends and family things they probably wouldn't use. So we chose something everybody needs: Satisfying, delicious food. And more than enough of it to feed a large, hungry family for multiple meals.  
 
-    Once we had the product locked down, we focused our attention on supporting our sellers -- constantly refining and expanding the training, advice, and tools we provide to help set every participating seller up for the greatest possible success. 
+    Once we had the product locked down, we focused our attention on supporting our sellers -- constantly refining and expanding the training, advice, and tools we provide to help set every participating seller up for the greatest possible success.
 description: >
-  Barbecue fundraisers trusted by nonprofits throughout the South since 1999.
+  Something goes here.
 intro:
   blurbs:
     - image: /img/coffee.png

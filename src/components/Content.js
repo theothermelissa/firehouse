@@ -1,8 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import remark from 'remark'
+import remarkHTML from 'remark-html'
+
+const toHTML = value => remark()
+  .use(remarkHTML)
+  .processSync(value)
+  .toString()
+
+  console.log("toHTML: ", toHTML("###something else"))
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <div className={className} dangerouslySetInnerHTML={{ __html: toHTML(content) }} />
 )
 
 const Content = ({ content, className }) => (
