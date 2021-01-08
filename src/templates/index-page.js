@@ -8,6 +8,7 @@ import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
+  backgroundImage,
   title,
   heading,
   subheading,
@@ -70,12 +71,12 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
+                <div className="content" >
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <p className="subtitle">{mainpitch.description}</p>
                   </div>
                 </div>
                 <div className="columns">
