@@ -8,7 +8,7 @@ import BlogRoll from '../components/BlogRoll'
 import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
-  image,
+  imageForBackground,
   // backgroundImage,
   title,
   heading,
@@ -19,12 +19,13 @@ export const IndexPageTemplate = ({
   contentComponent,
 }) => {
   const DescriptionContent = contentComponent || Content
+  console.log("imageForBackground: ", imageForBackground);
 
   return (
     <div
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          !!imageForBackground.childImageSharp ? imageForBackground.childImageSharp.fluid.src : imageForBackground
         })`,
         backgroundSize: '92em',
         backgroundPosition: `top left`,
@@ -52,6 +53,8 @@ export const IndexPageTemplate = ({
             alignItems: 'center',
             flexDirection: 'column',
             backgroundColor: 'rgba(255, 255, 255, 0.8',
+            outline: 'solid 2px black',
+            outlineOffset: '-12px',
             boxSizing: 'border-box',
             backdropFilter: 'blur(1.5px)',
           }}
@@ -140,7 +143,7 @@ export const IndexPageTemplate = ({
 }
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  imageForBackground: PropTypes.object,
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -157,7 +160,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        imageForBackground={frontmatter.imageForBackground}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -184,7 +187,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
+        imageForBackground {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid

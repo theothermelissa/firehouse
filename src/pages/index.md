@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Firehouse Barbecue Fundraisers
-image: /img/woodPlanks.jpg
+imageForBackground: /img/woodPlanks.jpg
 heading: Barbecue fundraisers trusted by nonprofits throughout the South since 1999.
 subheading: High-profit, low-hassle local fundraising.
 mainpitch:
