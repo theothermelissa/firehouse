@@ -4,10 +4,16 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
+// import usePageInfo from './PageInfo'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+// const determineActiveNavTab = () => 
+
+const TemplateWrapper = ({ data, children }) => {
   const { title, description } = useSiteMetadata()
+  // const { path } = usePageInfo()
+  // const activeNavTab = 
+  // console.log("children.: ", children);
   return (
     <div>
       <Helmet>
@@ -56,3 +62,4 @@ const TemplateWrapper = ({ children }) => {
 }
 
 export default TemplateWrapper
+

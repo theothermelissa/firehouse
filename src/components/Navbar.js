@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import phoneNumber from '../img/phoneNumber.svg'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -14,6 +17,7 @@ const Navbar = class extends React.Component {
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
+    console.log("Logo: ", logo);
     this.setState(
       {
         active: !this.state.active,
@@ -32,61 +36,63 @@ const Navbar = class extends React.Component {
     )
   }
 
+  reportClick = () => {
+    console.log("Features has been clicked.")
+  };
+  
+
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
-          <div className="navbar-brand">
+          {/* <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Firehouse Fundraisers" style={{ height: '110px' }} />
             </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
+          </div> */}
+          <div
+            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => this.toggleHamburger()}
+          >
+            <span />
+            <span />
+            <span />
           </div>
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/">
+                Home
+              </Link>
+              {/* <a href="#features">Features</a> */}
+              <AnchorLink onAnchorLinkClick={this.reportClick()} to="/#features" title="Our features" className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" >
+                <span>Features!</span>
+              </AnchorLink>
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/contact/examples">
                 Form Examples
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+              <img src={phoneNumber} alt="(205)851-1448" style={{ display: 'flex', alignSelf: 'center', height: '2.5em' }} /> 
             </div>
           </div>
         </div>

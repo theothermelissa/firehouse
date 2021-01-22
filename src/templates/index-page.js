@@ -11,7 +11,8 @@ export const IndexPageTemplate = ({
   imageForBackground,
   // backgroundImage,
   title,
-  heading,
+  path,
+  heading, 
   subheading,
   mainpitch,
   description,
@@ -19,7 +20,6 @@ export const IndexPageTemplate = ({
   contentComponent,
 }) => {
   const DescriptionContent = contentComponent || Content
-  console.log("imageForBackground: ", imageForBackground);
 
   return (
     <div
@@ -113,7 +113,7 @@ export const IndexPageTemplate = ({
                       <p>{description}</p>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
+                  <Features gridItems={intro.blurbs} gridJumplinkId="features"/>
                   <div className="columns">
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/products">

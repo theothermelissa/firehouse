@@ -56,6 +56,12 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: "gatsby-plugin-anchor-links",
+            options: {
+              offset: -100
+            }
+          },
         ],
       },
     },

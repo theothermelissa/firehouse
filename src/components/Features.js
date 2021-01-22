@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
+const FeatureGrid = ({ gridItems, gridJumplinkId }) => (
+  <div className="columns is-multiline" id={gridJumplinkId}>
     {gridItems.map((item) => (
       <div key={item.text} className="column is-6">
         <section className="section">
@@ -31,6 +31,7 @@ FeatureGrid.propTypes = {
       text: PropTypes.string,
     })
   ),
+  gridJumplinkId: PropTypes.string,
 }
 
 export default FeatureGrid
