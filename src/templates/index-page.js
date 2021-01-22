@@ -4,14 +4,14 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import BlogRoll from '../components/BlogRoll'
 import Content, { HTMLContent } from '../components/Content'
+// import pigHead from './static/img/pigHead.png'
 
 export const IndexPageTemplate = ({
   imageForBackground,
   // backgroundImage,
   title,
-  path,
   heading, 
   subheading,
   mainpitch,
@@ -34,15 +34,13 @@ export const IndexPageTemplate = ({
     >
       <div
         className="full-width-image margin-top-0"
-        // style={{
-        //   backgroundImage: `url(${
-        //     !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        //   })`,
-        //   backgroundPosition: `top left`,
-        //   backgroundAttachment: `fixed`,
-        // }}
+        id='hero'
+        style={{
+          maxHeight: '60vh',
+        }}
       >
         <div
+          id='heroTile'
           style={{
             display: 'flex',
             minHeight: '250px',
@@ -85,6 +83,10 @@ export const IndexPageTemplate = ({
           >
             {subheading}
           </h3>
+          <img src={'/img/pigHead.png'} alt="Vintage Pig" style={{
+              maxWidth: '150px',
+              margin: '20px',
+            }}/>
         </div>
       </div>
       <section className="section section--gradient">
@@ -125,7 +127,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       Latest stories
                     </h3>
-                    <BlogRoll />
+                    {/* <BlogRoll /> */}
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
                         Read more

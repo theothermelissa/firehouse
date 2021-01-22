@@ -36,11 +36,6 @@ const Navbar = class extends React.Component {
     )
   }
 
-  reportClick = () => {
-    console.log("Features has been clicked.")
-  };
-  
-
   render() {
     return (
       <nav
@@ -72,13 +67,25 @@ const Navbar = class extends React.Component {
                 Home
               </Link>
               {/* <a href="#features">Features</a> */}
-              <AnchorLink onAnchorLinkClick={this.reportClick()} to="/#features" title="Our features" className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" >
-                <span>Features!</span>
+              <AnchorLink to="/#calculator" title="Profit Calculator" className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" >
+                <span>Calculator</span>
               </AnchorLink>
-              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/about">
-                About
+              <AnchorLink to="/#about" title="About Us" className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" >
+                <span>About</span>
+              </AnchorLink>
+              <AnchorLink to="/#schedule" title="Schedule Your Fundraiser" className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" >
+                <span>Schedule</span>
+              </AnchorLink>
+              {/* <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/reviews">
+                Reviews
               </Link>
               <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/products">
+                Our Products
+              </Link>
+              <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/resources">
+                Resources
+              </Link> */}
+              {/* <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/products">
                 Products
               </Link>
               <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/blog">
@@ -89,7 +96,7 @@ const Navbar = class extends React.Component {
               </Link>
               <Link className={"navbar-item is-hoverable is-tab"} activeClassName="is-active" to="/contact/examples">
                 Form Examples
-              </Link>
+              </Link> */}
             </div>
             <div className="navbar-end has-text-centered">
               <img src={phoneNumber} alt="(205)851-1448" style={{ display: 'flex', alignSelf: 'center', height: '2.5em' }} /> 
